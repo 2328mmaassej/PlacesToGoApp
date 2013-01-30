@@ -1,0 +1,19 @@
+<h1>Listing Restaurants</h1>
+
+<p><%= link_to 'New Place', new_place_path %></p>
+
+<% @places.each do |place| %>
+  <ul>
+    <li>
+      <p><%=link_to image_tag(place.url), place_url(place.id) %></p>
+      <h1><%= place.name %></h1>
+      Neighborhood: <p><%= place.location %></p>
+      <p>Cuisine: <%= place.cuisine %></p>
+    <%= link_to 'Show', place %>
+    <%= link_to 'Edit', edit_place_path(place) %>
+    <%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li> 
+  </ul>
+
+<% end %>
+

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<!-- <ul>
+  <li> -->  
+    <p>
+    <%=link_to image_tag(@place.url, :width => 600, :height => 600), @place.website%>
+    </p>
+
+    <h2>
+      <b>Name:</b>
+      <%= @place.name %>
+    </h2>
+
+    <h2>
+      <b>Cuisine:</b>
+      <%= @place.cuisine %>
+    </h2>
+
+    <h2>
+      <b>Neighborhood:</b>
+      <%= @place.location %>
+    </h2>
+
+    <h2>
+      <b>Comments:</b>
+      <%= @place.comments %>
+    </h2> 
+
+<%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Back', places_path %>
